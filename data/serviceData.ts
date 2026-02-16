@@ -257,6 +257,53 @@ export const services: ServiceData[] = [
             { step: 4, title: 'Entrega', description: 'Archivos optimizados para cada plataforma: web, redes sociales, impresión.' }
         ],
         cta: '¿Listo para contenido que realmente impacte?'
+    },
+    {
+        slug: 'ia',
+        title: 'Inteligencia Artificial',
+        subtitle: 'IA que resuelve problemas reales',
+        description: 'No hacemos IA por moda. Desarrollamos modelos de Machine Learning y Deep Learning entrenados con tus datos para resolver problemas específicos de tu negocio. Desde visión por computadora hasta procesamiento de lenguaje natural.',
+        accent: '#8A2BE2',
+        features: [
+            {
+                icon: 'eye',
+                title: 'Computer Vision',
+                description: 'Modelos de detección y clasificación de imágenes. Reconocimiento de objetos, segmentación y análisis visual para agricultura, manufactura e industria.'
+            },
+            {
+                icon: 'brain',
+                title: 'Procesamiento de Lenguaje Natural',
+                description: 'Chatbots inteligentes, análisis de sentimiento, extracción de información y generación de texto con modelos de lenguaje avanzados.'
+            },
+            {
+                icon: 'trending-up',
+                title: 'ML Predictivo',
+                description: 'Modelos de predicción de demanda, scoring de clientes, detección de fraude y forecasting basados en tus datos históricos.'
+            },
+            {
+                icon: 'settings',
+                title: 'Fine-Tuning de Modelos',
+                description: 'Adaptamos modelos pre-entrenados a tu caso de uso específico. Fine-tuning con PyTorch para máxima precisión con datasets especializados.'
+            },
+            {
+                icon: 'cpu',
+                title: 'Automatización con IA',
+                description: 'Integración de modelos de IA en tus flujos de trabajo existentes. Clasificación automática, procesamiento de documentos y toma de decisiones.'
+            },
+            {
+                icon: 'book-open',
+                title: 'Consultoría en IA',
+                description: 'Evaluamos la viabilidad de IA para tu caso de uso. Te decimos honestamente si necesitas IA o si hay una solución más simple.'
+            }
+        ],
+        tools: ['PyTorch', 'Python', 'TensorFlow', 'Hugging Face', 'OpenAI API', 'LangChain', 'FastAPI', 'Docker', 'AWS SageMaker', 'CUDA'],
+        process: [
+            { step: 1, title: 'Evaluación', description: 'Analizamos tu problema y tus datos. Determinamos si IA es la solución correcta y qué enfoque usar.' },
+            { step: 2, title: 'Datos y Preparación', description: 'Recolección, limpieza y etiquetado de datos. Definimos métricas de éxito y línea base.' },
+            { step: 3, title: 'Entrenamiento', description: 'Desarrollo y fine-tuning de modelos. Experimentación iterativa hasta alcanzar la precisión objetivo.' },
+            { step: 4, title: 'Despliegue', description: 'Integración del modelo en producción con APIs, monitoreo de rendimiento y reentrenamiento periódico.' }
+        ],
+        cta: '¿Tienes un problema que la IA puede resolver?'
     }
 ];
 

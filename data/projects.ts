@@ -318,6 +318,85 @@ Optimizamos la carga de imágenes y scripts para asegurar que Google viera el si
 
         liveUrl: 'https://best4u.com.co',
         featured: false
+    },
+    {
+        id: 'agrovision',
+        slug: 'agrovision',
+
+        title: 'IA para Detección de Árboles en Cultivos',
+        client: 'Syntria R&D',
+        industry: 'Agricultura / AgTech',
+        year: '2025',
+        duration: '3 meses',
+
+        heroImage: '/images/portfolio/agrovision-hero.jpg',
+        thumbnail: '/images/portfolio/agrovision-hero.jpg',
+
+        tagline: 'Modelo de Computer Vision entrenado con fine-tuning para reconocimiento automático de árboles en cultivos agrícolas',
+
+        challenge: `El monitoreo manual de cultivos es lento, costoso y propenso a errores. Los agricultores necesitan saber cuántos árboles tienen, su estado de salud y su distribución espacial, pero hacerlo manualmente en miles de hectáreas es inviable.
+
+El reto era desarrollar un modelo de inteligencia artificial capaz de detectar y clasificar árboles individuales en imágenes aéreas de cultivos, con alta precisión incluso en condiciones variables de iluminación y vegetación densa.`,
+
+        solution: `Desarrollamos un sistema de Computer Vision end-to-end utilizando deep learning y fine-tuning:
+
+**Dataset y Preparación:**
+Recopilamos y etiquetamos un dataset especializado de imágenes aéreas de cultivos. Cada imagen fue anotada manualmente con bounding boxes para cada árbol visible.
+
+**Fine-Tuning con PyTorch:**
+Partimos de un modelo pre-entrenado y aplicamos fine-tuning con PyTorch para adaptarlo específicamente a la detección de árboles en contexto agrícola. Iteramos sobre hiperparámetros, data augmentation y técnicas de regularización hasta alcanzar la precisión objetivo.
+
+**Pipeline de Inferencia:**
+Creamos un pipeline automatizado que procesa imágenes aéreas, detecta cada árbol, y genera reportes con conteo, ubicación y métricas de distribución.`,
+
+        tags: ['Computer Vision', 'Deep Learning', 'PyTorch', 'Fine-Tuning'],
+        services: ['Desarrollo de Modelo ML', 'Procesamiento de Imágenes', 'Pipeline de Datos', 'Investigación Aplicada'],
+
+        deliverables: [
+            {
+                title: 'Modelo de Detección',
+                description: 'Modelo de deep learning entrenado con fine-tuning para detectar árboles en imágenes aéreas'
+            },
+            {
+                title: 'Pipeline de Procesamiento',
+                description: 'Sistema automatizado para procesar imágenes y generar reportes de detección'
+            },
+            {
+                title: 'API de Inferencia',
+                description: 'Endpoint para enviar imágenes y recibir predicciones en tiempo real'
+            },
+            {
+                title: 'Documentación Técnica',
+                description: 'Métricas de rendimiento, arquitectura del modelo y guía de reentrenamiento'
+            }
+        ],
+
+        timeline: [
+            {
+                phase: 'Mes 1',
+                duration: '4 semanas',
+                description: 'Recolección de datos, etiquetado y preparación del dataset'
+            },
+            {
+                phase: 'Mes 2',
+                duration: '4 semanas',
+                description: 'Entrenamiento, fine-tuning y experimentación con arquitecturas'
+            },
+            {
+                phase: 'Mes 3',
+                duration: '4 semanas',
+                description: 'Optimización, pipeline de inferencia y despliegue'
+            }
+        ],
+
+        results: [
+            { metric: '94%', description: 'Precisión de detección (mAP)' },
+            { metric: '< 1s', description: 'Inferencia por imagen' },
+            { metric: '+10K', description: 'Árboles detectados en pruebas' },
+            { metric: '100%', description: 'Automatización del proceso de conteo' }
+        ],
+
+        featured: true
     }
 ];
 

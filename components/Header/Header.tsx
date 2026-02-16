@@ -27,6 +27,7 @@ const Header: React.FC = () => {
     { slug: 'marketing', label: 'Marketing Digital', accent: '#EC4899' },
     { slug: 'ventas', label: 'Ventas', accent: '#14B8A6' },
     { slug: 'contenido', label: 'Producción Multimedia', accent: '#EF4444' },
+    { slug: 'ia', label: 'Inteligencia Artificial', accent: '#8A2BE2' },
   ];
 
   const isActive = (path: string) => {
