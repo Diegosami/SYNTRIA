@@ -5,6 +5,10 @@ import '../styles/variables.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://syntria.io'),
+  icons: {
+    icon: { url: '/LOGO_SYNTRIA.svg', type: 'image/svg+xml' },
+    apple: '/LOGO_SYNTRIA.svg',
+  },
   title: {
     default: 'Syntria | Ingeniería de Crecimiento para Empresas del Futuro',
     template: '%s | Syntria',
