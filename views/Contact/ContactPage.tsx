@@ -84,10 +84,10 @@ const ContactPage: React.FC = () => {
                             <form
                                 name="contact"
                                 method="POST"
-                                data-netlify="true"
+
                                 className="cp-form"
                             >
-                                <input type="hidden" name="form-name" value="contact" />
+
                                 <h3>Cuéntanos tu proyecto</h3>
 
                                 <div className="form-row">

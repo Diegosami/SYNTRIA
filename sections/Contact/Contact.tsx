@@ -47,9 +47,9 @@ const Contact: React.FC = () => {
                             className="contact-form"
                             name="contact-home"
                             method="POST"
-                            data-netlify="true"
+
                         >
-                            <input type="hidden" name="form-name" value="contact-home" />
+
 
                             <div className="form-group">
                                 <label htmlFor="name">Nombre</label>
