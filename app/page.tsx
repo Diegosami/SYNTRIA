@@ -11,6 +11,7 @@ import Team from '../sections/Team';
 import WhySyntria from '../sections/WhySyntria';
 import Contact from '../sections/Contact';
 import WaveDivider from '../components/WaveDivider';
+import '../views/Home/HomePage.css';
 
 export default function HomePage() {
   return (
