@@ -1,0 +1,128 @@
+.team {
+    background: transparent;
+    overflow: hidden;
+}
+
+.team-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    align-items: center;
+}
+
+/* Image */
+.team-image-wrapper {
+    position: relative;
+}
+
+.team-image {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.team-image-accent {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 150px;
+    height: 150px;
+    background: var(--color-accent);
+    border-radius: 50%;
+    opacity: 0.1;
+    filter: blur(60px);
+    z-index: -1;
+}
+
+/* Text Content */
+.team-text {
+    padding-left: var(--space-8);
+}
+
+.team-text .badge {
+    margin-bottom: var(--space-4);
+}
+
+.team-title {
+    font-size: var(--text-4xl);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+    margin-bottom: var(--space-6);
+}
+
+.team-description {
+    font-size: var(--text-lg);
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--space-10);
+}
+
+/* Values */
+.team-values {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.value-item {
+    display: flex;
+    gap: var(--space-4);
+    padding: var(--space-4);
+    background: var(--color-bg-secondary);
+    border-radius: 16px;
+    transition: all var(--transition-normal);
+}
+
+.value-item:hover {
+    background: var(--color-accent-light);
+    transform: translateX(8px);
+}
+
+.value-number {
+    font-size: var(--text-sm);
+    font-weight: var(--font-bold);
+    color: var(--color-accent);
+    min-width: 32px;
+}
+
+.value-content h4 {
+    font-size: var(--text-base);
+    font-weight: var(--font-semibold);
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-1);
+}
+
+.value-content p {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .team-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+
+    .team-text {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .team-values {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-title {
+        font-size: var(--text-2xl);
+    }
+
+    .team-image {
+        border-radius: 16px;
+    }
+}

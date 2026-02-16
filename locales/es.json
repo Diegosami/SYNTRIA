@@ -1,0 +1,28 @@
+{
+    "nav": {
+        "solutions": "Soluciones",
+        "portfolio": "Portafolio",
+        "about": "Nosotros",
+        "contact": "Solicitar Auditoría"
+    },
+    "hero": {
+        "kicker": "TRANSFORMA TU NEGOCIO",
+        "title": "Ingeniería de Crecimiento para",
+        "title_highlight": "Empresas del Futuro",
+        "description": "Ecosistema completo de software, inteligencia artificial, diseño y marketing digital. Hacemos crecer tu negocio con tecnología y estrategia integrada.",
+        "cta_main": "Ver Soluciones",
+        "cta_secondary": "Hablemos",
+        "stat_experience": "Años de Experiencia",
+        "stat_satisfaction": "Clientes Felices",
+        "stat_projects": "Proyectos Exitosos"
+    },
+    "footer": {
+        "tagline": "Ingeniería de crecimiento para empresas del futuro.",
+        "copyright": "© {{year}} Syntria. Todos los derechos reservados.",
+        "links": {
+            "solutions": "Soluciones",
+            "company": "Empresa",
+            "contact": "Contacto"
+        }
+    }
+}

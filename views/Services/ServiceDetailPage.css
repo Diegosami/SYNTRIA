@@ -1,0 +1,840 @@
+/* ==========================================
+   SERVICE DETAIL PAGE — Premium Creative Design
+   ========================================== */
+
+/* ---------- CSS Variables ---------- */
+.sdp {
+    --accent: #55FF4B;
+}
+
+/* ---------- HERO ---------- */
+.sdp-hero {
+    position: relative;
+    padding: 160px 0 100px;
+    overflow: hidden;
+    background: #0a0a0f;
+    color: #fff;
+}
+
+.sdp-hero-bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+/* Dual floating glow orbs */
+.sdp-hero-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+}
+
+.sdp-glow-1 {
+    top: -20%;
+    right: -5%;
+    width: 600px;
+    height: 600px;
+    background: var(--accent);
+    opacity: 0.1;
+    animation: sdpFloat1 8s ease-in-out infinite;
+}
+
+.sdp-glow-2 {
+    bottom: -30%;
+    left: -10%;
+    width: 400px;
+    height: 400px;
+    background: var(--accent);
+    opacity: 0.06;
+    animation: sdpFloat2 10s ease-in-out infinite;
+}
+
+@keyframes sdpFloat1 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(-30px, 20px) scale(1.15);
+    }
+}
+
+@keyframes sdpFloat2 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(20px, -30px) scale(1.1);
+    }
+}
+
+/* Subtle dot grid pattern */
+.sdp-hero-grid-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+.sdp-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.45);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    margin-bottom: 40px;
+    transition: all 0.3s;
+    letter-spacing: 0.02em;
+}
+
+.sdp-back:hover {
+    color: var(--accent);
+    gap: 12px;
+}
+
+.sdp-hero-content {
+    max-width: 550px;
+    position: relative;
+    z-index: 1;
+    flex: 1;
+}
+
+/* Side-by-side layout: text + visual */
+.sdp-hero-row {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.sdp-hero-visual {
+    flex: 1 1 auto;
+    max-width: 560px;
+    position: relative;
+    z-index: 1;
+}
+
+.sdp-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: inline-block;
+    color: var(--accent);
+    margin-bottom: 20px;
+    padding: 6px 16px;
+    border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+    border-radius: 100px;
+    background: color-mix(in srgb, var(--accent) 8%, transparent);
+}
+
+.sdp-hero h1 {
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    margin-bottom: 24px;
+    color: #fff !important;
+    letter-spacing: -0.02em;
+}
+
+.sdp-hero-desc {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 600px;
+    margin-bottom: 48px;
+}
+
+/* Hero Stats Bar */
+.sdp-hero-stats {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 24px 32px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    max-width: fit-content;
+}
+
+.sdp-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.sdp-stat-num {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+}
+
+.sdp-stat-label {
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.sdp-stat-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ---------- Section Headers ---------- */
+.sdp-section-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.sdp-section-tag {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent);
+    margin-bottom: 16px;
+}
+
+.sdp-section-header h2 {
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 800;
+    margin-bottom: 14px;
+    letter-spacing: -0.02em;
+}
+
+.sdp-accent {
+    color: var(--accent);
+}
+
+.sdp-section-header p {
+    font-size: 1.05rem;
+    color: var(--color-text-secondary);
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ---------- FEATURES — Bento Grid ---------- */
+.sdp-features {
+    padding: 120px 0;
+    background: var(--color-bg-primary);
+    position: relative;
+}
+
+.sdp-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.sdp-feature-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: default;
+}
+
+.sdp-feature-card-inner {
+    height: 100%;
+    padding: 36px 28px;
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    position: relative;
+    transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow: hidden;
+}
+
+.sdp-feature-card:hover .sdp-feature-card-inner {
+    transform: translateY(-4px);
+    border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08),
+        0 0 0 1px color-mix(in srgb, var(--accent) 15%, transparent);
+}
+
+/* Animated shine sweep on hover */
+.sdp-feature-shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            color-mix(in srgb, var(--accent) 6%, transparent),
+            transparent);
+    transition: none;
+    pointer-events: none;
+}
+
+.sdp-feature-card:hover .sdp-feature-shine {
+    left: 150%;
+    transition: left 0.8s ease;
+}
+
+/* Top accent bar */
+.sdp-feature-card-inner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+
+.sdp-feature-card:hover .sdp-feature-card-inner::before {
+    transform: scaleX(1);
+}
+
+/* First card gets a larger style */
+.sdp-card-featured {
+    grid-column: span 2;
+}
+
+.sdp-card-featured .sdp-feature-card-inner {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 4px 20px;
+    align-items: start;
+}
+
+.sdp-card-featured .sdp-feature-icon-wrap {
+    grid-row: 1 / -1;
+    align-self: center;
+}
+
+.sdp-feature-icon-wrap {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.4s;
+}
+
+.sdp-feature-card:hover .sdp-feature-icon-wrap {
+    background: color-mix(in srgb, var(--accent) 18%, transparent);
+    transform: scale(1.05);
+}
+
+.sdp-feature-card h3 {
+    font-size: 1.12rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--color-text-primary);
+}
+
+.sdp-feature-card p {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+}
+
+/* ---------- TOOLS — Floating Cloud ---------- */
+.sdp-tools {
+    padding: 100px 0;
+    background: var(--color-bg-secondary);
+    position: relative;
+    overflow: hidden;
+}
+
+.sdp-tools-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.sdp-tool-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 26px;
+    background: var(--color-bg-primary);
+    border: 1px solid var(--color-border);
+    border-radius: 100px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: default;
+    animation: sdpPillFloat 3s ease-in-out infinite;
+    letter-spacing: 0.01em;
+}
+
+@keyframes sdpPillFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+.sdp-tool-pill:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 12px 32px color-mix(in srgb, var(--accent) 20%, transparent);
+}
+
+/* ---------- PROCESS — Alternating Timeline ---------- */
+.sdp-process {
+    padding: 120px 0;
+    background: var(--color-bg-primary);
+    position: relative;
+}
+
+.sdp-process-track {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Vertical connecting line */
+.sdp-process-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg,
+            transparent,
+            var(--color-border) 10%,
+            var(--color-border) 90%,
+            transparent);
+    transform: translateX(-50%);
+}
+
+.sdp-process-card {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 48px;
+    width: 50%;
+}
+
+.sdp-process-card:last-child {
+    margin-bottom: 0;
+}
+
+/* Alternating layout */
+.sdp-card-left {
+    padding-right: 48px;
+    text-align: right;
+    flex-direction: row-reverse;
+    margin-left: 0;
+}
+
+.sdp-card-right {
+    padding-left: 48px;
+    margin-left: 50%;
+}
+
+/* Numbered dot on the timeline */
+.sdp-process-dot {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #0a0a0a;
+    font-weight: 800;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 6px 20px color-mix(in srgb, var(--accent) 35%, transparent);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Position dots on the center line */
+.sdp-card-left .sdp-process-dot {
+    position: absolute;
+    right: -24px;
+}
+
+.sdp-card-right .sdp-process-dot {
+    position: absolute;
+    left: -24px;
+}
+
+.sdp-process-card:hover .sdp-process-dot {
+    transform: scale(1.15);
+    box-shadow: 0 10px 30px color-mix(in srgb, var(--accent) 50%, transparent);
+}
+
+.sdp-process-card-body {
+    padding: 24px 28px;
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    transition: all 0.4s;
+    flex: 1;
+}
+
+.sdp-process-card:hover .sdp-process-card-body {
+    border-color: color-mix(in srgb, var(--accent) 30%, transparent);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+}
+
+.sdp-process-card-body h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--color-text-primary);
+}
+
+.sdp-process-card-body p {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+}
+
+/* ---------- CTA — Immersive ---------- */
+.sdp-cta {
+    padding: 120px 0;
+    background: #0a0a0f;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.sdp-cta-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.06;
+    filter: blur(150px);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.sdp-cta-content {
+    position: relative;
+    z-index: 1;
+}
+
+.sdp-cta-content h2 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    color: #fff !important;
+    margin-bottom: 18px;
+    letter-spacing: -0.02em;
+}
+
+.sdp-cta-content p {
+    font-size: 1.08rem;
+    color: rgba(255, 255, 255, 0.5);
+    max-width: 520px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+}
+
+.sdp-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 40px;
+    background: var(--accent);
+    color: #0a0a0a;
+    font-weight: 700;
+    font-size: 1.05rem;
+    border-radius: 14px;
+    text-decoration: none;
+    transition: all 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+.sdp-cta-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.sdp-cta-btn:hover::before {
+    opacity: 1;
+}
+
+.sdp-cta-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px color-mix(in srgb, var(--accent) 45%, transparent);
+}
+
+.sdp-cta-note {
+    display: block;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.02em;
+}
+
+/* ---------- EXPLORE OTHER SERVICES ---------- */
+.sdp-explore {
+    padding: 100px 0;
+    background: var(--color-bg-secondary);
+}
+
+.sdp-explore-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.sdp-explore-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 28px;
+    background: var(--color-bg-primary);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    text-decoration: none;
+    transition: all 0.35s;
+}
+
+.sdp-explore-card:hover {
+    border-color: var(--card-accent);
+    transform: translateX(6px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.sdp-explore-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.sdp-explore-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 2px;
+}
+
+.sdp-explore-card p {
+    font-size: 0.82rem;
+    color: var(--color-text-secondary);
+}
+
+.sdp-explore-card svg {
+    margin-left: auto;
+    color: var(--color-text-secondary);
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: all 0.3s;
+    flex-shrink: 0;
+}
+
+.sdp-explore-card:hover svg {
+    opacity: 1;
+    transform: translateX(0);
+    color: var(--card-accent);
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media (max-width: 968px) {
+    .sdp-features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sdp-card-featured {
+        grid-column: span 2;
+    }
+
+    /* Switch to linear timeline on tablet */
+    .sdp-process-line {
+        left: 24px;
+    }
+
+    .sdp-process-card {
+        width: 100%;
+        padding-left: 72px !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        flex-direction: row !important;
+        text-align: left !important;
+    }
+
+    .sdp-card-left .sdp-process-dot,
+    .sdp-card-right .sdp-process-dot {
+        position: absolute;
+        left: 0 !important;
+        right: auto !important;
+    }
+
+    .sdp-hero-row {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .sdp-hero-visual {
+        max-width: 360px;
+        width: 100%;
+    }
+
+    .sdp-explore-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .sdp-hero {
+        padding: 130px 0 70px;
+    }
+
+    .sdp-hero-visual {
+        max-width: 280px;
+    }
+
+    .sdp-hero-stats {
+        flex-direction: row;
+        gap: 20px;
+        padding: 20px 24px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .sdp-stat-divider {
+        height: 32px;
+    }
+
+    .sdp-features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sdp-card-featured {
+        grid-column: span 1;
+    }
+
+    .sdp-card-featured .sdp-feature-card-inner {
+        display: block;
+    }
+
+    .sdp-features,
+    .sdp-process {
+        padding: 80px 0;
+    }
+
+    .sdp-tools {
+        padding: 70px 0;
+    }
+
+    .sdp-cta {
+        padding: 80px 0;
+    }
+
+    .sdp-explore {
+        padding: 70px 0;
+    }
+
+    .sdp-process-line {
+        left: 24px;
+    }
+
+    .sdp-process-card {
+        width: 100%;
+        padding-left: 72px !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        flex-direction: row !important;
+        text-align: left !important;
+        margin-bottom: 32px;
+    }
+
+    .sdp-card-left .sdp-process-dot,
+    .sdp-card-right .sdp-process-dot {
+        position: absolute;
+        left: 0 !important;
+        right: auto !important;
+    }
+}
+
+/* ==========================================
+   DARK MODE
+   ========================================== */
+[data-theme="dark"] .sdp-feature-card-inner {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .sdp-feature-card:hover .sdp-feature-card-inner {
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4),
+        0 0 0 1px color-mix(in srgb, var(--accent) 20%, transparent);
+}
+
+[data-theme="dark"] .sdp-tool-pill {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .sdp-tool-pill:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .sdp-tools {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .sdp-process-card-body {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .sdp-process-card:hover .sdp-process-card-body {
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .sdp-explore {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .sdp-explore-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .sdp-explore-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}

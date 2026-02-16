@@ -1,0 +1,9 @@
+# Syntria - robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://syntria.io/sitemap.xml
+
+# Block development/build files
+Disallow: /assets/

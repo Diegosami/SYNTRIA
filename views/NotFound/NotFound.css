@@ -1,0 +1,103 @@
+.not-found {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg-primary);
+    overflow: hidden;
+}
+
+.not-found-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.not-found-gradient {
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: -25%;
+    left: -25%;
+    background-image:
+        radial-gradient(at 30% 30%, rgba(85, 255, 75, 0.12) 0px, transparent 50%),
+        radial-gradient(at 70% 70%, rgba(85, 255, 75, 0.08) 0px, transparent 50%);
+    filter: blur(80px);
+    opacity: 0.8;
+}
+
+.not-found-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: var(--space-8);
+}
+
+.not-found-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-8);
+}
+
+.number-4 {
+    font-size: clamp(6rem, 15vw, 12rem);
+    font-weight: var(--font-extrabold);
+    color: var(--color-text-primary);
+    line-height: 1;
+    letter-spacing: -0.05em;
+    opacity: 0.15;
+}
+
+.number-0 {
+    position: relative;
+    font-size: clamp(6rem, 15vw, 12rem);
+    font-weight: var(--font-extrabold);
+    color: var(--color-accent);
+    line-height: 1;
+    letter-spacing: -0.05em;
+}
+
+.number-0-glow {
+    position: absolute;
+    inset: -30%;
+    background: radial-gradient(circle, rgba(85, 255, 75, 0.3) 0%, transparent 60%);
+    pointer-events: none;
+    animation: pulse-gentle 3s ease-in-out infinite;
+}
+
+@keyframes pulse-gentle {
+
+    0%,
+    100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+.not-found-title {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-bold);
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-4);
+}
+
+.not-found-description {
+    font-size: var(--text-lg);
+    color: var(--color-text-secondary);
+    max-width: 400px;
+    margin: 0 auto var(--space-8);
+}
+
+@media (max-width: 768px) {
+    .not-found-title {
+        font-size: var(--text-2xl);
+    }
+}

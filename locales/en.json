@@ -1,0 +1,28 @@
+{
+    "nav": {
+        "solutions": "Solutions",
+        "portfolio": "Portfolio",
+        "about": "About Us",
+        "contact": "Request Audit"
+    },
+    "hero": {
+        "kicker": "TRANSFORM YOUR BUSINESS",
+        "title": "Growth Engineering for",
+        "title_highlight": "Future Enterprises",
+        "description": "Complete ecosystem of software, artificial intelligence, design, and digital marketing. We grow your business with integrated technology and strategy.",
+        "cta_main": "View Solutions",
+        "cta_secondary": "Let's Talk",
+        "stat_experience": "Years Experience",
+        "stat_satisfaction": "Happy Clients",
+        "stat_projects": "Successful Projects"
+    },
+    "footer": {
+        "tagline": "Growth engineering for companies of the future.",
+        "copyright": "© {{year}} Syntria. All rights reserved.",
+        "links": {
+            "solutions": "Solutions",
+            "company": "Company",
+            "contact": "Contact"
+        }
+    }
+}

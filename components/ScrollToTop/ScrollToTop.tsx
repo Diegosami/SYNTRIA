@@ -1,0 +1,6 @@
+'use client';
+// Next.js handles scroll restoration automatically.
+// This component is kept as a no-op for compatibility.
+export default function ScrollToTop() {
+    return null;
+}

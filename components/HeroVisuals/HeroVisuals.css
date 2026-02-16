@@ -1,0 +1,1433 @@
+/* ==========================================
+   HERO VISUALS — STUNNING 3D Device Mockups
+   Bright screens, accent glows, metallic frames
+   ========================================== */
+
+.hv-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    flex-shrink: 0;
+}
+
+.hv-scene {
+    position: relative;
+    perspective: 1800px;
+}
+
+/* === MASSIVE ACCENT GLOW behind each scene === */
+.hv-scene::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 90%;
+    transform: translate(-50%, -50%);
+    background: var(--accent);
+    opacity: 0.15;
+    filter: blur(80px);
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* ---- Floating Badges ---- */
+.hv-badge {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(8, 8, 16, 0.85);
+    backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #fff;
+    z-index: 10;
+    animation: hvBFloat 4s ease-in-out infinite;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15),
+        0 0 20px color-mix(in srgb, var(--accent) 15%, transparent);
+    white-space: nowrap;
+}
+
+.hv-b-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    display: block;
+}
+
+.hv-b-success {
+    background: #55FF4B;
+    box-shadow: 0 0 10px #55FF4B;
+}
+
+.hv-b-info {
+    background: #60a5fa;
+    box-shadow: 0 0 10px #60a5fa;
+}
+
+.hv-b-warn {
+    background: #F59E0B;
+    box-shadow: 0 0 10px #F59E0B;
+}
+
+@keyframes hvBFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.hv-b-deploy {
+    bottom: 20%;
+    right: -15px;
+}
+
+.hv-b-commit {
+    top: 5%;
+    right: 8%;
+    animation-delay: 1.3s;
+}
+
+.hv-b-layers {
+    top: 3%;
+    right: -10px;
+    animation-delay: 0.7s;
+}
+
+.hv-b-notif {
+    bottom: 18%;
+    right: -15px;
+    animation-delay: 0.5s;
+}
+
+.hv-b-deal {
+    bottom: 16%;
+    right: -15px;
+    animation-delay: 0.8s;
+}
+
+.hv-b-export {
+    bottom: 22%;
+    right: -10px;
+    animation-delay: 0.6s;
+}
+
+/* ---- Traffic light dots ---- */
+.hv-dots {
+    display: flex;
+    gap: 5px;
+}
+
+.hv-dots i {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: block;
+}
+
+.hv-dots i:nth-child(1) {
+    background: #ff5f57;
+    box-shadow: 0 0 4px rgba(255, 95, 87, 0.4);
+}
+
+.hv-dots i:nth-child(2) {
+    background: #febc2e;
+    box-shadow: 0 0 4px rgba(254, 188, 46, 0.4);
+}
+
+.hv-dots i:nth-child(3) {
+    background: #28c840;
+    box-shadow: 0 0 4px rgba(40, 200, 64, 0.4);
+}
+
+/* ---- Shared Top bar ---- */
+.hv-mb-topbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 9px 14px;
+    background: linear-gradient(180deg, #282840, #222238);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hv-mb-tabs {
+    display: flex;
+    gap: 2px;
+}
+
+.hv-mb-tabs span {
+    font-size: 0.6rem;
+    padding: 3px 10px;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 500;
+}
+
+.hv-tab-active {
+    background: rgba(255, 255, 255, 0.12) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+
+/* ==========================================================
+   TECNOLOGÍA — MacBook + iPhone
+   ========================================================== */
+.hv-tech {
+    padding-bottom: 10px;
+}
+
+/* --- MacBook --- */
+.hv-macbook {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    transform: rotateY(-8deg) rotateX(4deg);
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(.25, .46, .45, .94);
+    z-index: 1;
+}
+
+.hv-macbook:hover {
+    transform: rotateY(-2deg) rotateX(1deg) scale(1.03);
+}
+
+.hv-mb-screen {
+    background: #1a1a2e;
+    border-radius: 10px 10px 0 0;
+    /* Metallic silver gradient border */
+    border: 2px solid;
+    border-image: linear-gradient(180deg, #6a6a80, #3a3a50, #5a5a70) 1;
+    border-bottom: none;
+    overflow: hidden;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(255, 255, 255, 0.08),
+        inset 0 0 40px rgba(0, 0, 0, 0.2),
+        0 0 80px color-mix(in srgb, var(--accent) 10%, transparent);
+    position: relative;
+}
+
+/* Glass reflection on screen */
+.hv-mb-screen::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 50%;
+    height: 200%;
+    background: linear-gradient(115deg,
+            transparent 40%,
+            rgba(255, 255, 255, 0.03) 45%,
+            rgba(255, 255, 255, 0.06) 50%,
+            transparent 55%);
+    transform: rotate(-15deg);
+    pointer-events: none;
+    z-index: 5;
+}
+
+.hv-mb-base {
+    height: 14px;
+    background: linear-gradient(180deg, #50506a, #3a3a50, #44445c);
+    border-radius: 0 0 8px 8px;
+    border: 2px solid #50506a;
+    border-top: 1px solid #6a6a80;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.hv-mb-notch {
+    width: 15%;
+    height: 4px;
+    background: #3a3a50;
+    border-radius: 0 0 5px 5px;
+    position: absolute;
+    top: -1px;
+    left: 42.5%;
+}
+
+/* Code editor — BRIGHT and readable */
+.hv-mb-editor {
+    padding: 12px 0;
+    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+    font-size: 10px;
+    line-height: 1.9;
+    background: #1e1e30;
+}
+
+.hv-ln {
+    padding: 0 14px;
+    display: flex;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.7);
+    white-space: nowrap;
+}
+
+.hv-ln:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.hv-ln-num {
+    color: rgba(255, 255, 255, 0.2);
+    min-width: 12px;
+    text-align: right;
+    user-select: none;
+}
+
+/* Syntax colors — BRIGHTER */
+.hv-c-purple {
+    color: #d19afc;
+    font-weight: 600;
+}
+
+.hv-c-blue {
+    color: #79c0ff;
+}
+
+.hv-c-green {
+    color: #7ee787;
+}
+
+.hv-c-yellow {
+    color: #ffa657;
+}
+
+.hv-c-red {
+    color: #ff7b72;
+}
+
+/* --- iPhone --- */
+.hv-iphone {
+    position: absolute;
+    right: -5%;
+    top: 3%;
+    width: 150px;
+    z-index: 3;
+    animation: hvPhFloat 5s ease-in-out infinite;
+    filter: drop-shadow(0 30px 50px rgba(0, 0, 0, 0.7));
+}
+
+@keyframes hvPhFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(6deg);
+    }
+
+    50% {
+        transform: translateY(-14px) rotate(6deg);
+    }
+}
+
+.hv-ip-frame {
+    background: linear-gradient(145deg, #2a2a42, #1e1e32, #2a2a42);
+    border: 2.5px solid;
+    border-image: linear-gradient(180deg, #5a5a70, #3a3a50, #5a5a70) 1;
+    border-radius: 24px;
+    padding: 8px 6px;
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.7),
+        0 0 0 1px rgba(255, 255, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15),
+        0 0 60px color-mix(in srgb, var(--accent) 8%, transparent);
+    /* Fix border-image breaking border-radius */
+    border-image: none;
+    border-color: #4a4a64;
+    position: relative;
+}
+
+/* Side buttons */
+.hv-ip-frame::before {
+    content: '';
+    position: absolute;
+    right: -3px;
+    top: 25%;
+    width: 3px;
+    height: 18px;
+    background: linear-gradient(180deg, #5a5a70, #4a4a60);
+    border-radius: 0 2px 2px 0;
+}
+
+.hv-ip-island {
+    width: 34px;
+    height: 9px;
+    background: #0a0a14;
+    border-radius: 12px;
+    margin: 0 auto 6px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hv-ip-screen {
+    background: linear-gradient(180deg, #161630, #12122a);
+    border-radius: 16px;
+    overflow: hidden;
+    aspect-ratio: 9/17;
+    display: flex;
+    flex-direction: column;
+}
+
+.hv-ip-statusbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    font-size: 6px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.hv-ip-battery {
+    width: 16px;
+    height: 7px;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    border-radius: 2px;
+    position: relative;
+}
+
+.hv-ip-battery::before {
+    content: '';
+    position: absolute;
+    right: -4px;
+    top: 1px;
+    width: 2px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 0 1px 1px 0;
+}
+
+.hv-ip-battery::after {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 1.5px;
+    bottom: 1.5px;
+    right: 4px;
+    background: var(--accent);
+    border-radius: 1px;
+    box-shadow: 0 0 4px color-mix(in srgb, var(--accent) 60%, transparent);
+}
+
+.hv-ip-app {
+    flex: 1;
+    padding: 6px 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hv-ip-nav-bar {
+    font-size: 8.5px;
+    font-weight: 800;
+    color: #fff;
+    text-align: center;
+    padding: 6px 0;
+}
+
+.hv-ip-stat-row {
+    display: flex;
+    gap: 5px;
+}
+
+.hv-ip-stat {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 7px 4px;
+    text-align: center;
+}
+
+.hv-ip-stat strong {
+    display: block;
+    font-size: 11px;
+    color: var(--accent);
+    font-weight: 800;
+    text-shadow: 0 0 10px color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+.hv-ip-stat small {
+    font-size: 5px;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.hv-ip-chart-placeholder {
+    flex: 1;
+    background: linear-gradient(180deg,
+            color-mix(in srgb, var(--accent) 18%, transparent) 0%,
+            color-mix(in srgb, var(--accent) 5%, transparent) 100%);
+    border-radius: 10px;
+    border: 1px solid color-mix(in srgb, var(--accent) 15%, transparent);
+}
+
+.hv-ip-list-item {
+    height: 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.hv-ip-li-short {
+    width: 70%;
+}
+
+.hv-ip-home-bar {
+    width: 35%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 3px;
+    margin: 6px auto 4px;
+}
+
+
+/* ==========================================================
+   DISEÑO — iPad + Apple Pencil
+   ========================================================== */
+.hv-design {
+    padding-bottom: 10px;
+}
+
+.hv-ipad {
+    max-width: 480px;
+    transform: rotateY(-7deg) rotateX(3deg);
+    transition: transform 0.8s cubic-bezier(.25, .46, .45, .94);
+}
+
+.hv-ipad:hover {
+    transform: rotateY(-1deg) rotateX(0deg) scale(1.03);
+}
+
+.hv-ipad-frame {
+    background: linear-gradient(145deg, #2a2a42, #1e1e32);
+    border: 2.5px solid #4a4a64;
+    border-radius: 18px;
+    padding: 12px;
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(255, 255, 255, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12),
+        0 0 80px color-mix(in srgb, var(--accent) 10%, transparent);
+    position: relative;
+}
+
+.hv-ipad-cam {
+    width: 6px;
+    height: 6px;
+    background: #2e2e44;
+    border: 1px solid #3a3a50;
+    border-radius: 50%;
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hv-ipad-screen {
+    background: #1a1a2e;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Figma-like toolbar */
+.hv-fig-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 12px;
+    background: linear-gradient(180deg, #282840, #222238);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hv-fig-tools {
+    display: flex;
+    gap: 5px;
+}
+
+.hv-fig-t {
+    width: 14px;
+    height: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.hv-fig-t-active {
+    background: color-mix(in srgb, var(--accent) 60%, transparent) !important;
+    border-color: var(--accent) !important;
+    box-shadow: 0 0 8px color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+.hv-fig-title {
+    font-size: 0.6rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 600;
+}
+
+/* Canvas + Sidebar */
+.hv-fig-canvas {
+    flex: 1;
+    position: relative;
+    display: flex;
+    min-height: 260px;
+}
+
+.hv-fig-artboard {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 24px;
+    position: relative;
+    /* Checkerboard — Stronger */
+    background:
+        repeating-conic-gradient(rgba(255, 255, 255, 0.04) 0% 25%, transparent 0% 50%) 0 0 / 20px 20px;
+}
+
+.hv-fig-logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent) 50%, #000));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        0 10px 30px color-mix(in srgb, var(--accent) 40%, transparent),
+        0 0 0 2px color-mix(in srgb, var(--accent) 25%, transparent);
+    animation: hvLogoPulse 3s ease-in-out infinite;
+}
+
+@keyframes hvLogoPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 10px 30px color-mix(in srgb, var(--accent) 40%, transparent), 0 0 0 2px color-mix(in srgb, var(--accent) 25%, transparent);
+    }
+
+    50% {
+        box-shadow: 0 10px 40px color-mix(in srgb, var(--accent) 55%, transparent), 0 0 0 3px color-mix(in srgb, var(--accent) 35%, transparent);
+    }
+}
+
+.hv-fig-logo-inner {
+    font-size: 24px;
+    font-weight: 900;
+    color: #0a0a0a;
+}
+
+.hv-fig-type-big {
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hv-fig-type-sm {
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.hv-fig-colors {
+    display: flex;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.hv-fig-colors span {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s;
+    cursor: default;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hv-fig-colors span:hover {
+    transform: scale(1.35) translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Selection handles */
+.hv-fig-selection {
+    position: absolute;
+    top: 12%;
+    left: 15%;
+    right: 28%;
+    bottom: 12%;
+    border: 2px solid var(--accent);
+    pointer-events: none;
+    box-shadow: 0 0 12px color-mix(in srgb, var(--accent) 20%, transparent);
+}
+
+.hv-sel-h {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border: 2px solid var(--accent);
+    border-radius: 2px;
+    display: block;
+    box-shadow: 0 0 6px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+.hv-sel-tl {
+    top: -5px;
+    left: -5px;
+}
+
+.hv-sel-tr {
+    top: -5px;
+    right: -5px;
+}
+
+.hv-sel-bl {
+    bottom: -5px;
+    left: -5px;
+}
+
+.hv-sel-br {
+    bottom: -5px;
+    right: -5px;
+}
+
+.hv-fig-cursor {
+    position: absolute;
+    top: 60%;
+    left: 70%;
+    z-index: 10;
+    pointer-events: none;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+    animation: hvCursorMove 4s ease-in-out infinite;
+}
+
+@keyframes hvCursorMove {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-30px, -20px);
+    }
+}
+
+.hv-fig-cursor span {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: var(--accent);
+    color: #000;
+    font-size: 7px;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Properties sidebar */
+.hv-fig-sidebar {
+    width: 80px;
+    background: linear-gradient(180deg, #1e1e34, #1a1a2e);
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 12px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hv-fig-sep {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+    margin: 4px 0;
+}
+
+.hv-fig-prop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hv-fig-prop small {
+    font-size: 6px;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.hv-fig-prop span {
+    font-size: 6.5px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 700;
+}
+
+.hv-fig-fill-preview {
+    width: 16px !important;
+    height: 12px;
+    border-radius: 3px;
+    background: var(--accent) !important;
+    display: inline-block;
+    box-shadow: 0 0 8px color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+/* Apple Pencil 2 Realism */
+/* Apple Pencil Removed */
+
+
+/* ==========================================================
+   MARKETING — iMac with Dashboard
+   ========================================================== */
+.hv-mkt {
+    padding-bottom: 10px;
+}
+
+.hv-imac {
+    max-width: 500px;
+    margin: 0 auto;
+    transform: rotateY(-5deg) rotateX(3deg);
+    transition: transform 0.8s cubic-bezier(.25, .46, .45, .94);
+}
+
+.hv-imac:hover {
+    transform: rotateY(-1deg) rotateX(0deg) scale(1.03);
+}
+
+.hv-imac-screen {
+    background: #1a1a2e;
+    border: 2.5px solid #4a4a64;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(255, 255, 255, 0.08),
+        inset 0 0 20px rgba(0, 0, 0, 0.2),
+        0 0 80px color-mix(in srgb, var(--accent) 10%, transparent);
+    position: relative;
+}
+
+/* Glass reflection */
+.hv-imac-screen::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 50%;
+    height: 200%;
+    background: linear-gradient(115deg,
+            transparent 40%,
+            rgba(255, 255, 255, 0.03) 45%,
+            rgba(255, 255, 255, 0.06) 50%,
+            transparent 55%);
+    transform: rotate(-15deg);
+    pointer-events: none;
+    z-index: 5;
+}
+
+.hv-imac-chin {
+    height: 20px;
+    background: linear-gradient(180deg, #4a4a64, #3a3a50, #44445c);
+    border: 2.5px solid #4a4a64;
+    border-top: 1px solid #5a5a70;
+    border-radius: 0 0 12px 12px;
+}
+
+.hv-imac-stand {
+    width: 28%;
+    height: 35px;
+    background: linear-gradient(180deg, #44445c, #3a3a50);
+    margin: 0 auto;
+    clip-path: polygon(8% 0, 92% 0, 100% 100%, 0 100%);
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2), -2px 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.hv-imac-foot {
+    width: 45%;
+    height: 6px;
+    background: linear-gradient(180deg, #50506a, #3a3a50);
+    margin: 0 auto;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Analytics */
+.hv-imac-body {
+    display: flex;
+    min-height: 200px;
+}
+
+.hv-ana-sidebar {
+    width: 42px;
+    background: linear-gradient(180deg, #1a1a30, #161628);
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 10px 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hv-ana-logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent) 40%, #000));
+    margin: 0 auto;
+    box-shadow: 0 4px 12px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+.hv-ana-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hv-ana-mi {
+    height: 7px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.06);
+    display: block;
+}
+
+.hv-ana-mi-active {
+    background: color-mix(in srgb, var(--accent) 55%, transparent) !important;
+    box-shadow: 0 0 8px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+.hv-ana-main {
+    flex: 1;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hv-ana-kpis {
+    display: flex;
+    gap: 8px;
+}
+
+.hv-ana-kpi {
+    flex: 1;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.hv-kpi-number {
+    font-size: 12px;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hv-kpi-desc {
+    font-size: 5.5px;
+    color: rgba(255, 255, 255, 0.4);
+    margin: 3px 0;
+}
+
+.hv-kpi-badge-up {
+    display: inline-block;
+    font-size: 5.5px;
+    font-weight: 700;
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 18%, transparent);
+    padding: 2px 6px;
+    border-radius: 5px;
+    text-shadow: 0 0 6px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+/* SVG Chart */
+.hv-ana-chart {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 8px;
+}
+
+.hv-svg-chart {
+    width: 100%;
+    height: 100%;
+}
+
+.hv-chart-draw {
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+    animation: hvDraw 2.5s ease-out 0.5s forwards;
+}
+
+.hv-chart-dot {
+    opacity: 0;
+    animation: hvDotPop 0.4s ease-out 2.8s forwards;
+}
+
+@keyframes hvDraw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes hvDotPop {
+    0% {
+        opacity: 0;
+        r: 0;
+    }
+
+    100% {
+        opacity: 1;
+        r: 4;
+    }
+}
+
+
+/* ==========================================================
+   VENTAS — CRM Kanban
+   ========================================================== */
+.hv-sales {
+    padding-bottom: 10px;
+}
+
+.hv-mb-sales {
+    max-width: 420px;
+}
+
+.hv-crm {
+    display: flex;
+    gap: 7px;
+    padding: 10px;
+    min-height: 160px;
+    background: #1a1a2e;
+}
+
+.hv-crm-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hv-crm-header {
+    font-size: 6.5px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 5px 7px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hv-crm-h-warm {
+    border-color: #F59E0B;
+    color: #F59E0B;
+}
+
+.hv-crm-h-won {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.hv-crm-count {
+    font-size: 5.5px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 6px;
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.hv-crm-card {
+    padding: 7px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s;
+}
+
+.hv-crm-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hv-crm-c-warm {
+    border-left: 3px solid #F59E0B;
+    background: rgba(245, 158, 11, 0.05);
+}
+
+.hv-crm-c-won {
+    border-left: 3px solid var(--accent);
+    background: color-mix(in srgb, var(--accent) 8%, transparent);
+}
+
+.hv-crm-av {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.06));
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hv-crm-info {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.hv-crm-info b {
+    display: block;
+    font-size: 7px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 700;
+}
+
+.hv-crm-tags {
+    display: flex;
+    gap: 3px;
+}
+
+.hv-tag {
+    font-size: 5.5px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.hv-tag-blue {
+    background: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.25);
+}
+
+.hv-tag-gray {
+    background: rgba(255, 255, 255, 0.1);
+    color: #9ca3af;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.hv-tag-org {
+    background: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.hv-tag-green {
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.hv-crm-val-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1px;
+}
+
+.hv-crm-prog {
+    width: 60%;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.hv-crm-prog>div {
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+}
+
+.hv-crm-info small {
+    font-size: 6px;
+    color: var(--accent);
+    font-weight: 700;
+    text-shadow: 0 0 6px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+.hv-deal-\$ {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #0a0a0a;
+    font-size: 10px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 12px color-mix(in srgb, var(--accent) 50%, transparent);
+}
+
+
+/* ==========================================================
+   CONTENIDO — Video Editor
+   ========================================================== */
+.hv-content {
+    padding-bottom: 10px;
+}
+
+.hv-vid-editor {
+    display: flex;
+    flex-direction: column;
+    background: #1a1a2e;
+}
+
+.hv-vid-preview {
+    flex: 1;
+    min-height: 110px;
+    background: linear-gradient(135deg, #0c0c1a, #121228, #0c0c1a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hv-vid-play {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--accent) 85%, #000);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.5),
+        0 0 20px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+.hv-vid-play:hover {
+    transform: scale(1.15);
+    background: var(--accent);
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.5),
+        0 0 30px color-mix(in srgb, var(--accent) 50%, transparent);
+}
+
+.hv-vid-play svg {
+    margin-left: 2px;
+}
+
+.hv-vid-timecode {
+    position: absolute;
+    bottom: 8px;
+    left: 12px;
+    font-size: 6.5px;
+    font-family: 'SF Mono', 'Consolas', monospace;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Timeline */
+.hv-vid-timeline {
+    background: linear-gradient(180deg, #1e1e36, #1a1a30);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+    min-height: 80px;
+}
+
+.hv-tl-ruler {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 34px 4px 22px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.hv-tl-ruler span {
+    font-size: 5px;
+    color: rgba(255, 255, 255, 0.25);
+    font-family: monospace;
+}
+
+.hv-tl-tracks {
+    padding: 6px 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hv-tl-track {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 22px;
+}
+
+.hv-tl-label {
+    font-size: 5.5px;
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 700;
+    width: 16px;
+    text-align: right;
+}
+
+.hv-tl-clips {
+    flex: 1;
+    display: flex;
+    gap: 3px;
+    height: 100%;
+}
+
+.hv-clip {
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.hv-clip:hover {
+    filter: brightness(1.5);
+    transform: scaleY(1.1);
+}
+
+.hv-clip-v1 {
+    flex: 4;
+    background: linear-gradient(90deg,
+            color-mix(in srgb, var(--accent) 50%, transparent),
+            color-mix(in srgb, var(--accent) 30%, transparent));
+    border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+    box-shadow: 0 0 8px color-mix(in srgb, var(--accent) 15%, transparent);
+}
+
+.hv-clip-v2 {
+    flex: 2.5;
+    background: linear-gradient(90deg, rgba(100, 140, 255, 0.35), rgba(100, 140, 255, 0.18));
+    border: 1px solid rgba(100, 140, 255, 0.3);
+    box-shadow: 0 0 8px rgba(100, 140, 255, 0.1);
+}
+
+.hv-clip-v3 {
+    flex: 3;
+    background: linear-gradient(90deg,
+            color-mix(in srgb, var(--accent) 40%, transparent),
+            color-mix(in srgb, var(--accent) 22%, transparent));
+    border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+.hv-clip-a1 {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+}
+
+.hv-clip-a1::after {
+    content: '';
+    position: absolute;
+    inset: 3px 4px;
+    background: repeating-linear-gradient(90deg,
+            rgba(255, 255, 255, 0.12) 0, rgba(255, 255, 255, 0.12) 1px,
+            transparent 1px, transparent 3px);
+}
+
+/* Playhead */
+.hv-playhead {
+    position: absolute;
+    left: 38%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--accent);
+    z-index: 2;
+    box-shadow: 0 0 14px color-mix(in srgb, var(--accent) 60%, transparent);
+}
+
+.hv-ph-head {
+    position: absolute;
+    top: -1px;
+    left: -5px;
+    width: 12px;
+    height: 10px;
+    background: var(--accent);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    box-shadow: 0 2px 6px color-mix(in srgb, var(--accent) 50%, transparent);
+}
+
+.hv-export-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #0a0a0a;
+    font-size: 11px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px color-mix(in srgb, var(--accent) 50%, transparent);
+}
+
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media (max-width: 968px) {
+    .hv-wrapper {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .hv-macbook,
+    .hv-ipad,
+    .hv-imac {
+        transform: rotateY(-3deg) rotateX(1deg) !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .hv-wrapper {
+        max-width: 340px;
+    }
+
+    .hv-iphone {
+        width: 100px;
+        right: -3%;
+    }
+
+    .hv-badge {
+        font-size: 0.6rem;
+        padding: 6px 11px;
+    }
+
+    .hv-pencil {
+        display: none;
+    }
+
+    .hv-scene::before {
+        filter: blur(60px);
+        opacity: 0.1;
+    }
+}

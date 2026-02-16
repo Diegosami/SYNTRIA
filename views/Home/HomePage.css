@@ -1,0 +1,105 @@
+/* =============================================
+   HomePage - Section Styling with Neutral Tones
+   ============================================= */
+
+.home-page {
+    overflow-x: hidden;
+}
+
+/* Section Wrappers with Neutral Gray-Green Backgrounds */
+.section-light {
+    background-color: var(--color-section-light);
+}
+
+.section-alt {
+    background-color: var(--color-section-alt);
+}
+
+.section-warm {
+    background-color: var(--color-section-warm);
+}
+
+.section-soft {
+    background-color: var(--color-section-soft);
+}
+
+.section-dark {
+    background-color: var(--color-bg-dark);
+}
+
+/* Ensure sections inside wrappers maintain proper spacing */
+.section-light>section,
+.section-alt>section,
+.section-warm>section,
+.section-soft>section,
+.section-dark>section {
+    background: transparent;
+}
+
+/* =============================================
+   Dark Section Text Overrides
+   ============================================= */
+
+/* Botzi Feature - Dark Mode */
+.section-dark .botzi-title,
+.section-dark .botzi-content {
+    color: #FFFFFF;
+}
+
+.section-dark .botzi-description {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.section-dark .botzi-description strong {
+    color: #FFFFFF;
+}
+
+.section-dark .feature-item span {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Testimonials - Dark Mode */
+.section-dark .testimonials-header h2 {
+    color: #FFFFFF;
+}
+
+.section-dark .testimonial-quote p {
+    color: #FFFFFF;
+}
+
+.section-dark .author-name {
+    color: #FFFFFF;
+}
+
+.section-dark .author-role {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.section-dark .testimonial-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section-dark .testimonial-author {
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Team - Dark Mode */
+.section-dark .team-title,
+.section-dark .team-member-name {
+    color: #FFFFFF;
+}
+
+.section-dark .team-subtitle,
+.section-dark .team-member-role {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.section-dark .team-label .label-text {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.section-dark .team-member-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+}
