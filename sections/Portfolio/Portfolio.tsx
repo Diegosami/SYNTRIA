@@ -7,7 +7,7 @@ import './Portfolio.css';
 const PortfolioCard: React.FC<{
     project: typeof projects[0];
 }> = ({ project }) => (
-    <Link href={`/portfolio/${project.slug}`} className="portfolio-card-link">
+    <Link href={`/portafolio/${project.slug}`} className="portfolio-card-link">
         <article className={`portfolio-card ${project.featured ? 'portfolio-card-featured' : ''}`}>
             <div className="portfolio-media">
                 <img src={project.thumbnail} alt={project.client} className="portfolio-img" loading="lazy" />
