@@ -396,7 +396,7 @@ Creamos un pipeline automatizado que procesa imágenes aéreas, detecta cada ár
             { metric: '100%', description: 'Automatización del proceso de conteo' }
         ],
 
-        featured: true
+        featured: false
     }
 ];
 

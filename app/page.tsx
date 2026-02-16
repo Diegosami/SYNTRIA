@@ -22,42 +22,42 @@ export default function HomePage() {
       <AuthorityBar />
       <Services />
 
-      {/* Onda: Blanco → Negro */}
-      <WaveDivider color="var(--color-bg-dark)" bgColor="var(--color-bg-primary)" />
+      {/* Onda: la curva negra va DENTRO de la zona negra de BotziFeature */}
+      <WaveDivider color="var(--color-bg-dark)" bgColor="var(--color-bg-dark)" variant="curve" />
 
       {/* SOLUCIONES - Negro con logo Botzi */}
       <BotziFeature />
 
-      {/* Onda: Negro → Blanco */}
-      <WaveDivider color="var(--color-bg-primary)" bgColor="var(--color-bg-dark)" />
+      {/* Onda: la curva negra va DENTRO de la zona negra de BotziFeature */}
+      <WaveDivider color="var(--color-bg-dark)" bgColor="var(--color-bg-dark)" variant="curveUp" />
 
       {/* PORTFOLIO */}
       <Portfolio />
 
-      {/* Onda: Blanco → Negro */}
-      <WaveDivider color="var(--color-bg-dark)" bgColor="var(--color-bg-primary)" variant="curve" />
+      {/* Onda: la curva negra va DENTRO de la zona negra de Testimonios */}
+      <WaveDivider color="var(--color-bg-dark)" bgColor="var(--color-bg-dark)" variant="curve" />
 
       {/* TESTIMONIOS - Negro */}
       <div className="section-dark">
         <Testimonials />
       </div>
 
-      {/* Onda: Negro → Blanco */}
-      <WaveDivider color="var(--color-bg-primary)" bgColor="var(--color-bg-dark)" variant="curve" />
+      {/* Onda: la curva negra va DENTRO de la zona negra de Testimonios */}
+      <WaveDivider color="var(--color-bg-dark)" bgColor="var(--color-bg-dark)" variant="curveUp" />
 
       {/* PROCESO */}
       <Process />
 
-      {/* Onda: Blanco → Negro */}
-      <WaveDivider color="var(--color-bg-dark)" bgColor="var(--color-bg-primary)" />
+      {/* Onda: la curva negra va DENTRO de la zona negra de Team */}
+      <WaveDivider color="var(--color-bg-dark)" bgColor="var(--color-bg-dark)" variant="curve" />
 
       {/* EQUIPO - Negro */}
       <div className="section-dark">
         <Team />
       </div>
 
-      {/* Onda: Negro → Blanco */}
-      <WaveDivider color="var(--color-bg-primary)" bgColor="var(--color-bg-dark)" />
+      {/* Onda: la curva negra va DENTRO de la zona negra de Team */}
+      <WaveDivider color="var(--color-bg-dark)" bgColor="var(--color-bg-dark)" variant="curveUp" />
 
       {/* CTA FINAL */}
       <WhySyntria />
