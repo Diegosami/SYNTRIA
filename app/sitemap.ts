@@ -4,30 +4,31 @@ import { projects } from '../data/projects';
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://syntria.io';
+    const lastModified = new Date('2025-02-15');
 
     // Static pages
     const staticPages: MetadataRoute.Sitemap = [
         {
             url: baseUrl,
-            lastModified: new Date(),
+            lastModified,
             changeFrequency: 'weekly',
             priority: 1.0,
         },
         {
             url: `${baseUrl}/servicios`,
-            lastModified: new Date(),
+            lastModified,
             changeFrequency: 'monthly',
             priority: 0.9,
         },
         {
             url: `${baseUrl}/portafolio`,
-            lastModified: new Date(),
+            lastModified,
             changeFrequency: 'monthly',
             priority: 0.8,
         },
         {
             url: `${baseUrl}/contacto`,
-            lastModified: new Date(),
+            lastModified,
             changeFrequency: 'monthly',
             priority: 0.7,
         },
@@ -36,7 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Dynamic service pages
     const servicePages: MetadataRoute.Sitemap = services.map((service) => ({
         url: `${baseUrl}/servicios/${service.slug}`,
-        lastModified: new Date(),
+        lastModified,
         changeFrequency: 'monthly' as const,
         priority: 0.8,
     }));
@@ -44,7 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Dynamic portfolio case study pages
     const portfolioPages: MetadataRoute.Sitemap = projects.map((project) => ({
         url: `${baseUrl}/portfolio/${project.slug}`,
-        lastModified: new Date(),
+        lastModified,
         changeFrequency: 'monthly' as const,
         priority: 0.7,
     }));

@@ -1,15 +1,11 @@
 'use client';
-import SEO from '../../components/SEO/SEO';
+
 import './ContactPage.css';
 
 const ContactPage: React.FC = () => {
     return (
         <div className="contact-page">
-            <SEO
-                title="Contacto"
-                description="Agenda tu auditoría gratuita. Analizamos tu situación y te decimos honestamente cómo podemos ayudarte a crecer."
-                path="/contacto"
-            />
+
             {/* Hero */}
             <section className="cp-hero">
                 <div className="cp-hero-bg"></div>

@@ -3,7 +3,7 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { getServiceBySlug, services as allServices } from '../../data/serviceData';
-import SEO from '../../components/SEO/SEO';
+
 import HeroVisual from '../../components/HeroVisuals/HeroVisuals';
 import './ServiceDetailPage.css';
 
@@ -68,11 +68,7 @@ const ServiceDetailPage: React.FC = () => {
 
     return (
         <div className="sdp" style={{ '--accent': service.accent } as React.CSSProperties}>
-            <SEO
-                title={service.title}
-                description={service.description}
-                path={`/servicios/${service.slug}`}
-            />
+
 
             {/* Hero — full-bleed dark with floating glow orbs */}
             <section className="sdp-hero">

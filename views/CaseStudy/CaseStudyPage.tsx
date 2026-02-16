@@ -3,7 +3,7 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { getProjectBySlug, projects } from '../../data/projects';
-import SEO from '../../components/SEO/SEO';
+
 import './CaseStudyPage.css';
 
 const CaseStudyPage: React.FC = () => {
@@ -23,11 +23,7 @@ const CaseStudyPage: React.FC = () => {
 
     return (
         <div className="case-study-page">
-            <SEO
-                title={`${project.client} — ${project.title}`}
-                description={project.tagline}
-                path={`/portfolio/${slug}`}
-            />
+
             {/* Hero */}
             <section className="cs-hero">
                 <div className="cs-hero-bg">

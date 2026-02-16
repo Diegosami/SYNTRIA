@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import SEO from '../../components/SEO/SEO';
+
 import './ServicesPage.css';
 
 // ========================================
@@ -367,11 +367,7 @@ const ServicesPage: React.FC = () => {
 
     return (
         <div className="services-page">
-            <SEO
-                title="Nuestros Productos"
-                description="Software, inteligencia artificial, diseño, marketing y ventas — todo conectado para impulsar tu crecimiento empresarial. Conoce el ecosistema completo de Syntria."
-                path="/servicios"
-            />
+
             {/* Hero */}
             <section className="sp-hero">
                 <div className="sp-hero-bg"></div>
