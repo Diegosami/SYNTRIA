@@ -1,11 +1,12 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { projects } from '../../data/projects';
 import './PortfolioPage.css';
 
 const PortfolioPage: React.FC = () => {
     return (
-        <main className="portfolio-page">
+        <div className="portfolio-page">
             {/* Hero */}
             <section className="pp-hero">
                 <div className="container">
@@ -34,10 +35,16 @@ const PortfolioPage: React.FC = () => {
                                 className={`pp-project-card ${project.featured ? 'pp-featured' : ''}`}
                             >
                                 <div className="pp-project-image">
-                                    <img src={project.thumbnail} alt={project.title} loading="lazy" />
+                                    <Image
+                                        src={project.thumbnail}
+                                        alt={project.title}
+                                        fill
+                                        className="object-cover"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    />
                                     <div className="pp-project-overlay">
                                         <Link
-                                            href={`/portfolio/${project.slug}`}
+                                            href={`/portafolio/${project.slug}`}
                                             className="pp-visit-btn"
                                         >
                                             Ver caso completo
@@ -100,7 +107,7 @@ const PortfolioPage: React.FC = () => {
                     </div>
                 </div>
             </section>
-        </main>
+        </div>
     );
 };
 

@@ -7,7 +7,6 @@ import '../i18n';
 
 import Header from './Header';
 import Footer from './Footer';
-import PageLoader from './PageLoader';
 import CustomCursor from './CustomCursor/CustomCursor';
 
 export default function Providers({ children }: { children: React.ReactNode }) {
@@ -22,7 +21,6 @@ export default function Providers({ children }: { children: React.ReactNode }) {
 
     return (
         <>
-            <PageLoader />
             <CustomCursor />
             <Header />
             <main>{children}</main>

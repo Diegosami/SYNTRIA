@@ -1,4 +1,4 @@
-'use client';
+
 import Hero from '../../sections/Hero';
 import AuthorityBar from '../../sections/AuthorityBar';
 import Services from '../../sections/Services';
@@ -10,16 +10,12 @@ import Team from '../../sections/Team';
 import WhySyntria from '../../sections/WhySyntria';
 import Contact from '../../sections/Contact';
 import WaveDivider from '../../components/WaveDivider';
-import SEO from '../../components/SEO/SEO';
 import './HomePage.css';
 
 const HomePage: React.FC = () => {
     return (
         <div className="home-page">
-            <SEO
-                path="/"
-                description="Ecosistema completo de software, inteligencia artificial, diseño y marketing digital. Hacemos crecer tu negocio con tecnología y estrategia integrada."
-            />
+
             {/* HERO */}
             <Hero />
 

@@ -35,21 +35,14 @@ export const metadata: Metadata = {
     title: 'Syntria | Ingeniería de Crecimiento para Empresas del Futuro',
     description:
       'Ecosistema completo de software, inteligencia artificial, diseño y marketing digital.',
-    images: [
-      {
-        url: '/images/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Syntria - Ingeniería de Crecimiento',
-      },
-    ],
+
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Syntria | Ingeniería de Crecimiento para Empresas del Futuro',
+
     description:
       'Ecosistema completo de software, inteligencia artificial, diseño y marketing digital.',
-    images: ['/images/og-image.png'],
   },
   robots: {
     index: true,

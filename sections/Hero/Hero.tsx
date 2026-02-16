@@ -2,6 +2,7 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
+import Image from 'next/image';
 import AOS from 'aos';
 import Spotlight from '../../components/ui/Spotlight';
 import FlipWords from '../../components/ui/FlipWords';
@@ -79,11 +80,14 @@ const Hero: React.FC = () => {
 
                 <div className="hero-visual" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                     <div className="visual-wrapper">
-                        <img
+                        <Image
                             src="/images/hero-visual.png"
                             alt="Equipo Syntria"
                             className="hero-image"
-                            loading="lazy"
+                            width={600}
+                            height={600}
+                            priority
+                            style={{ width: '100%', height: 'auto' }}
                         />
                         <div className="visual-glow"></div>
                     </div>

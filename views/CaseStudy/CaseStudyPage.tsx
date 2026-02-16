@@ -1,20 +1,14 @@
 'use client';
-import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { redirect } from 'next/navigation';
-import { getProjectBySlug, projects } from '../../data/projects';
-
+import { projects, CaseStudyProject } from '../../data/projects';
 import './CaseStudyPage.css';
 
-const CaseStudyPage: React.FC = () => {
-    const params = useParams<{ slug: string }>();
-    const slug = params?.slug;
-    const project = slug ? getProjectBySlug(slug) : undefined;
+interface CaseStudyPageProps {
+    project: CaseStudyProject;
+}
 
-    // Si no existe el proyecto, redirigir al portfolio
-    if (!project) {
-        redirect('/#portafolio');
-    }
+const CaseStudyPage: React.FC<CaseStudyPageProps> = ({ project }) => {
+    const slug = project.slug;
 
     // Siguiente y anterior proyecto para navegación
     const currentIndex = projects.findIndex(p => p.slug === slug);
@@ -32,7 +26,7 @@ const CaseStudyPage: React.FC = () => {
                 </div>
                 <div className="container">
                     <div className="cs-hero-content">
-                        <Link href="/#portafolio" className="cs-back-link">
+                        <Link href="/portafolio" className="cs-back-link">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                 <path d="M19 12H5M12 19l-7-7 7-7" />
                             </svg>
@@ -271,11 +265,11 @@ const CaseStudyPage: React.FC = () => {
             <section className="cs-navigation">
                 <div className="container">
                     <div className="nav-grid">
-                        <Link href={`/portfolio/${prevProject.slug}`} className="nav-link prev">
+                        <Link href={`/portafolio/${prevProject.slug}`} className="nav-link prev">
                             <span className="nav-label">Proyecto anterior</span>
                             <span className="nav-title">{prevProject.client}</span>
                         </Link>
-                        <Link href={`/portfolio/${nextProject.slug}`} className="nav-link next">
+                        <Link href={`/portafolio/${nextProject.slug}`} className="nav-link next">
                             <span className="nav-label">Siguiente proyecto</span>
                             <span className="nav-title">{nextProject.client}</span>
                         </Link>

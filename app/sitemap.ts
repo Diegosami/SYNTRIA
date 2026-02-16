@@ -44,7 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Dynamic portfolio case study pages
     const portfolioPages: MetadataRoute.Sitemap = projects.map((project) => ({
-        url: `${baseUrl}/portfolio/${project.slug}`,
+        url: `${baseUrl}/portafolio/${project.slug}`,
         lastModified,
         changeFrequency: 'monthly' as const,
         priority: 0.7,
