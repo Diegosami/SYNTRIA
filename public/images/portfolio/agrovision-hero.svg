@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Dark gradient background -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1a0f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d2818;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#55FF4B;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#8A2BE2;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  
+  <!-- Grid pattern -->
+  <g stroke="#55FF4B" stroke-opacity="0.08" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="630"/><line x1="60" y1="0" x2="60" y2="630"/>
+    <line x1="120" y1="0" x2="120" y2="630"/><line x1="180" y1="0" x2="180" y2="630"/>
+    <line x1="240" y1="0" x2="240" y2="630"/><line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="360" y1="0" x2="360" y2="630"/><line x1="420" y1="0" x2="420" y2="630"/>
+    <line x1="480" y1="0" x2="480" y2="630"/><line x1="540" y1="0" x2="540" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/><line x1="660" y1="0" x2="660" y2="630"/>
+    <line x1="720" y1="0" x2="720" y2="630"/><line x1="780" y1="0" x2="780" y2="630"/>
+    <line x1="840" y1="0" x2="840" y2="630"/><line x1="900" y1="0" x2="900" y2="630"/>
+    <line x1="960" y1="0" x2="960" y2="630"/><line x1="1020" y1="0" x2="1020" y2="630"/>
+    <line x1="1080" y1="0" x2="1080" y2="630"/><line x1="1140" y1="0" x2="1140" y2="630"/>
+    <line x1="0" y1="60" x2="1200" y2="60"/><line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/><line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/><line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/><line x1="0" y1="480" x2="1200" y2="480"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+  </g>
+  
+  <!-- Tree detection bounding boxes -->
+  <g fill="none" stroke="#8A2BE2" stroke-width="2" stroke-dasharray="4,2" opacity="0.7">
+    <rect x="120" y="140" width="80" height="80" rx="4"/>
+    <rect x="280" y="100" width="90" height="90" rx="4"/>
+    <rect x="440" y="160" width="75" height="75" rx="4"/>
+    <rect x="600" y="120" width="85" height="85" rx="4"/>
+    <rect x="760" y="150" width="70" height="70" rx="4"/>
+    <rect x="920" y="110" width="95" height="95" rx="4"/>
+    <rect x="150" y="320" width="85" height="85" rx="4"/>
+    <rect x="340" y="350" width="80" height="80" rx="4"/>
+    <rect x="510" y="300" width="90" height="90" rx="4"/>
+    <rect x="700" y="340" width="75" height="75" rx="4"/>
+    <rect x="860" y="310" width="85" height="85" rx="4"/>
+    <rect x="1020" y="350" width="80" height="80" rx="4"/>
+  </g>
+  
+  <!-- Tree dots (simplified) -->
+  <g fill="#55FF4B" opacity="0.6">
+    <circle cx="160" cy="180" r="25"/><circle cx="325" cy="145" r="30"/>
+    <circle cx="478" cy="198" r="22"/><circle cx="643" cy="163" r="28"/>
+    <circle cx="795" cy="185" r="20"/><circle cx="968" cy="155" r="32"/>
+    <circle cx="193" cy="363" r="28"/><circle cx="380" cy="390" r="25"/>
+    <circle cx="555" cy="345" r="30"/><circle cx="738" cy="378" r="22"/>
+    <circle cx="903" cy="353" r="28"/><circle cx="1060" cy="390" r="25"/>
+  </g>
+  
+  <!-- Confidence labels -->
+  <g font-family="monospace" font-size="11" fill="#8A2BE2">
+    <text x="124" y="136">98.2%</text>
+    <text x="284" y="96">95.7%</text>
+    <text x="444" y="156">97.1%</text>
+    <text x="604" y="116">94.3%</text>
+    <text x="764" y="146">96.8%</text>
+    <text x="924" y="106">93.5%</text>
+    <text x="154" y="316">97.4%</text>
+    <text x="344" y="346">95.1%</text>
+    <text x="514" y="296">98.0%</text>
+    <text x="704" y="336">94.9%</text>
+    <text x="864" y="306">96.2%</text>
+    <text x="1024" y="346">95.8%</text>
+  </g>
+  
+  <!-- Center label -->
+  <g transform="translate(600, 520)">
+    <rect x="-180" y="-22" width="360" height="44" rx="22" fill="#8A2BE2" fill-opacity="0.2" stroke="#8A2BE2" stroke-width="1"/>
+    <text text-anchor="middle" y="6" font-family="system-ui, sans-serif" font-size="16" fill="#ffffff" letter-spacing="2">COMPUTER VISION · FINE-TUNING · PYTORCH</text>
+  </g>
+</svg>

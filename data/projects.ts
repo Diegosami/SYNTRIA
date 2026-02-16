@@ -329,8 +329,8 @@ Optimizamos la carga de imágenes y scripts para asegurar que Google viera el si
         year: '2025',
         duration: '3 meses',
 
-        heroImage: '/images/portfolio/agrovision-hero.jpg',
-        thumbnail: '/images/portfolio/agrovision-hero.jpg',
+        heroImage: '/images/portfolio/agrovision-hero.svg',
+        thumbnail: '/images/portfolio/agrovision-hero.svg',
 
         tagline: 'Modelo de Computer Vision entrenado con fine-tuning para reconocimiento automático de árboles en cultivos agrícolas',
 
