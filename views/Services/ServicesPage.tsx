@@ -67,6 +67,7 @@ const GrowthStory: React.FC = () => (
                         <div className="orbit-item orbit-3">Marketing</div>
                         <div className="orbit-item orbit-4">Ventas</div>
                         <div className="orbit-item orbit-5">Contenido</div>
+                        <div className="orbit-item orbit-6">IA</div>
                         <div className="orbit-ring"></div>
                     </div>
                 </div>
@@ -410,7 +411,9 @@ const ServicesPage: React.FC = () => {
                 <div className="container">
                     <div className="pillars-grid">
                         {pillars.map((pillar, idx) => (
-                            <EcosystemPillar key={idx} {...pillar} />
+                            <div key={idx} data-aos="fade-up" data-aos-delay={idx * 100}>
+                                <EcosystemPillar {...pillar} />
+                            </div>
                         ))}
                     </div>
                 </div>

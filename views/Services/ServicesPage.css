@@ -79,7 +79,7 @@
 
 .pillars-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-4);
 }
 
@@ -315,6 +315,13 @@
     top: 20%;
     right: 10%;
     background: #EF4444;
+    color: white;
+}
+
+.orbit-6 {
+    bottom: 20%;
+    left: 10%;
+    background: #8A2BE2;
     color: white;
 }
 
@@ -790,7 +797,7 @@
    ======================================== */
 @media (max-width: 1200px) {
     .pillars-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .capabilities-grid {
