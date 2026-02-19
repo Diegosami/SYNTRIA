@@ -362,6 +362,23 @@ const ServicesPage: React.FC = () => {
             description: 'Videos, fotos y piezas que capturan atención y generan acción.',
             accent: '#EF4444',
             slug: 'contenido'
+        },
+        {
+            icon: (
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <path d="M12 2a4 4 0 0 1 4 4v1a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z" />
+                    <path d="M9 12h6" />
+                    <path d="M12 12v4" />
+                    <circle cx="7" cy="19" r="2" />
+                    <circle cx="17" cy="19" r="2" />
+                    <path d="M7 17v-3a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3" />
+                </svg>
+            ),
+            title: 'Inteligencia Artificial',
+            subtitle: 'IA que resuelve problemas reales',
+            description: 'Machine Learning, Deep Learning y Computer Vision entrenados con tus datos para resolver problemas específicos de tu negocio.',
+            accent: '#8A2BE2',
+            slug: 'ia'
         }
     ];
 
