@@ -1391,6 +1391,201 @@
 }
 
 
+/* ==========================================================
+   IA — Neural Network Training Dashboard
+   ========================================================== */
+.hv-ia {
+    padding-bottom: 10px;
+}
+
+.hv-mb-ia {
+    max-width: 480px;
+}
+
+.hv-ia-dashboard {
+    display: flex;
+    gap: 10px;
+    padding: 12px;
+    min-height: 200px;
+    background: #1a1a2e;
+}
+
+.hv-ia-metrics {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hv-ia-model-tag {
+    font-size: 6.5px;
+    font-weight: 700;
+    color: #c4b5fd;
+    background: rgba(138, 43, 226, 0.15);
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(138, 43, 226, 0.25);
+    display: inline-block;
+    align-self: flex-start;
+}
+
+.hv-ia-kpis {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.hv-ia-kpi {
+    padding: 6px 8px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 8px;
+}
+
+.hv-ia-kpi-label {
+    font-size: 5.5px;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hv-ia-kpi-val {
+    font-size: 11px;
+    font-weight: 800;
+    color: #fff;
+    margin: 1px 0 3px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hv-ia-kpi-bar {
+    height: 3px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.hv-ia-kpi-bar>div {
+    height: 100%;
+    background: linear-gradient(90deg, #8A2BE2, #c084fc);
+    border-radius: 2px;
+    transition: width 1.5s ease-out;
+    box-shadow: 0 0 6px rgba(138, 43, 226, 0.4);
+}
+
+.hv-ia-bar-loss>div {
+    background: linear-gradient(90deg, #22c55e, #86efac) !important;
+    box-shadow: 0 0 6px rgba(34, 197, 94, 0.4) !important;
+}
+
+.hv-ia-chart {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 6px;
+}
+
+.hv-ia-svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Neural Network Visualization */
+.hv-ia-network {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px;
+    background: rgba(138, 43, 226, 0.05);
+    border: 1px solid rgba(138, 43, 226, 0.15);
+    border-radius: 10px;
+}
+
+.hv-ia-nn-title {
+    font-size: 6.5px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.hv-ia-nn-layers {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+}
+
+.hv-ia-nn-col {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+}
+
+.hv-ia-node {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s;
+}
+
+.hv-ia-n-active {
+    background: rgba(138, 43, 226, 0.4);
+    border-color: #8A2BE2;
+    box-shadow: 0 0 8px rgba(138, 43, 226, 0.5);
+    animation: hvNodePulse 2s ease-in-out infinite;
+}
+
+.hv-ia-n-output {
+    background: rgba(85, 255, 75, 0.3);
+    border-color: #55FF4B;
+    box-shadow: 0 0 8px rgba(85, 255, 75, 0.4);
+    animation: hvNodePulse 2s ease-in-out infinite 0.5s;
+}
+
+@keyframes hvNodePulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 8px rgba(138, 43, 226, 0.3);
+        transform: scale(1);
+    }
+
+    50% {
+        box-shadow: 0 0 14px rgba(138, 43, 226, 0.6);
+        transform: scale(1.15);
+    }
+}
+
+.hv-ia-nn-labels {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hv-ia-nn-labels span {
+    font-size: 5px;
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 600;
+}
+
+/* IA Floating Badges */
+.hv-b-gpu {
+    top: 8%;
+    right: -5%;
+}
+
+.hv-b-pytorch {
+    bottom: 12%;
+    left: -5%;
+}
+
+
 /* ==========================================
    RESPONSIVE
    ========================================== */

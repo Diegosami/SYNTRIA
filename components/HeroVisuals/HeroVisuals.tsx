@@ -298,6 +298,87 @@ const ContentVisual: React.FC = () => (
     </div>
 );
 
+/* IA - Neural network training dashboard */
+const IAVisual: React.FC = () => (
+    <div className="hv-scene hv-ia">
+        <div className="hv-macbook hv-mb-ia">
+            <div className="hv-mb-screen">
+                <div className="hv-mb-topbar">
+                    <div className="hv-dots"><i /><i /><i /></div>
+                    <div className="hv-mb-tabs"><span className="hv-tab-active">model_v3.py</span><span>train.py</span></div>
+                </div>
+                <div className="hv-ia-dashboard">
+                    <div className="hv-ia-metrics">
+                        <div className="hv-ia-model-tag">ResNet-50 - Fine-tuning</div>
+                        <div className="hv-ia-kpis">
+                            <div className="hv-ia-kpi">
+                                <div className="hv-ia-kpi-label">Accuracy</div>
+                                <div className="hv-ia-kpi-val">97.3%</div>
+                                <div className="hv-ia-kpi-bar"><div style={{ width: '97.3%' }}></div></div>
+                            </div>
+                            <div className="hv-ia-kpi">
+                                <div className="hv-ia-kpi-label">Loss</div>
+                                <div className="hv-ia-kpi-val">0.042</div>
+                                <div className="hv-ia-kpi-bar hv-ia-bar-loss"><div style={{ width: '4.2%' }}></div></div>
+                            </div>
+                            <div className="hv-ia-kpi">
+                                <div className="hv-ia-kpi-label">Epoch</div>
+                                <div className="hv-ia-kpi-val">42 / 50</div>
+                                <div className="hv-ia-kpi-bar"><div style={{ width: '84%' }}></div></div>
+                            </div>
+                        </div>
+                        <div className="hv-ia-chart">
+                            <svg viewBox="0 0 200 60" preserveAspectRatio="none" className="hv-ia-svg">
+                                <defs>
+                                    <linearGradient id="iaGrad" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stopColor="#8A2BE2" stopOpacity="0.4" />
+                                        <stop offset="100%" stopColor="#8A2BE2" stopOpacity="0" />
+                                    </linearGradient>
+                                </defs>
+                                <path d="M0,55 C10,50 20,45 40,35 C60,28 80,22 100,18 C120,15 140,12 160,8 C180,5 190,4 200,3 L200,60 L0,60Z" fill="url(#iaGrad)" />
+                                <path d="M0,55 C10,50 20,45 40,35 C60,28 80,22 100,18 C120,15 140,12 160,8 C180,5 190,4 200,3" fill="none" stroke="#8A2BE2" strokeWidth="2" className="hv-chart-draw" />
+                                <circle cx="200" cy="3" r="3" fill="#8A2BE2" className="hv-chart-dot" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div className="hv-ia-network">
+                        <div className="hv-ia-nn-title">Neural Network</div>
+                        <div className="hv-ia-nn-layers">
+                            <div className="hv-ia-nn-col">
+                                <div className="hv-ia-node"></div>
+                                <div className="hv-ia-node"></div>
+                                <div className="hv-ia-node"></div>
+                                <div className="hv-ia-node"></div>
+                            </div>
+                            <div className="hv-ia-nn-col">
+                                <div className="hv-ia-node hv-ia-n-active"></div>
+                                <div className="hv-ia-node hv-ia-n-active"></div>
+                                <div className="hv-ia-node"></div>
+                                <div className="hv-ia-node hv-ia-n-active"></div>
+                                <div className="hv-ia-node"></div>
+                            </div>
+                            <div className="hv-ia-nn-col">
+                                <div className="hv-ia-node hv-ia-n-active"></div>
+                                <div className="hv-ia-node"></div>
+                                <div className="hv-ia-node hv-ia-n-active"></div>
+                            </div>
+                            <div className="hv-ia-nn-col">
+                                <div className="hv-ia-node hv-ia-n-output"></div>
+                                <div className="hv-ia-node hv-ia-n-output"></div>
+                            </div>
+                        </div>
+                        <div className="hv-ia-nn-labels">
+                            <span>Input</span><span>Hidden 1</span><span>Hidden 2</span><span>Output</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="hv-mb-base"><div className="hv-mb-notch"></div></div>
+        </div>
+        <div className="hv-badge hv-b-gpu"><i className="hv-b-dot hv-b-success"></i>GPU: A100 - 98%</div>
+        <div className="hv-badge hv-b-pytorch"><i className="hv-b-dot hv-b-info"></i>PyTorch 2.3</div>
+    </div>
+);
 /* Main export */
 const heroVisualMap: Record<string, React.FC> = {
     'tecnologia': TechVisual,
@@ -305,6 +386,7 @@ const heroVisualMap: Record<string, React.FC> = {
     'marketing': MarketingVisual,
     'ventas': SalesVisual,
     'contenido': ContentVisual,
+    'ia': IAVisual,
 };
 
 interface HeroVisualProps {
